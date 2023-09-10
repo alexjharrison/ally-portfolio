@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import CallToAction from "../components/CallToAction.astro";
 ---
 
 <BaseLayout
@@ -26,14 +27,7 @@ import Hero from "../components/Hero.astro";
       <section>
         <h2 class="section-title">Background</h2>
         <div class="content">
-          <p>
-            Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a>
-            makes people happy. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Proin nibh nisl condimentum id venenatis a
-            condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut
-            sem nulla pharetra diam sit amet. Diam quis enim lobortis
-            scelerisque fermentum dui faucibus in ornare.
-          </p>
+          <p>I currently work as a placeholder 1</p>
           <p>
             Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget
             gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat
@@ -42,26 +36,41 @@ import Hero from "../components/Hero.astro";
             pulvinar etiam non.
           </p>
           <p>
-            Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut
-            sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor
-            posuere ac ut consequat semper viverra. Viverra accumsan in nisl
-            nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-            pretium fusce.
+            When I'm off the clock you can find me skating for the <a
+              href="https://dirtyjerseyrollerderby.com/"
+              target="_blank">Dirty Jersey Roller Derby</a
+            > team. If you're in town come watch a bout!
           </p>
         </div>
       </section>
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p>Corporis voluptates tenetur laudantium.</p>
+          <p>
+            <strong>Lehigh Univerity</strong> - BS Psychology & BA Cognitive
+            Science
+          </p>
+          <p>
+            <strong>Carnegie Mellon</strong> - Masters in Human Computer
+            Interaction
+          </p>
         </div>
       </section>
       <section>
         <h2 class="section-title">Skills</h2>
         <div class="content">
-          <p>officia unde omnis</p>
+          <ul>
+            <li>Usability Testing</li>
+            <li>Contextual Inquiry</li>
+            <li>Wireframes</li>
+            <li>User Persona Creation</li>
+            <li>Journey Mapping</li>
+            <li>Survey Design</li>
+          </ul>
         </div>
       </section>
+
+      <CallToAction href="/assets/resume.pdf">Resume</CallToAction>
     </main>
 
     <ContactCTA />
@@ -107,6 +116,9 @@ import Hero from "../components/Hero.astro";
   .content :global(a:hover),
   .content :global(a:focus) {
     text-decoration-color: currentColor;
+  }
+  .content > p {
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 50em) {
