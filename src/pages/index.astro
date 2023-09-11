@@ -106,7 +106,11 @@ import ProjectSelect from "../components/ProjectSelect.astro";
               ].map(brand => (
                 <li class="mention-card">
                   <a href={brand.url} target="_blank">
-                    <img src={`/assets/logos/${brand.img}`} />
+                    <img
+                      src={`/assets/logos/${brand.img}`}
+                      alt={brand.url.split(".")[0] || ""}
+                      aria-label="company's about page"
+                    />
                   </a>
                 </li>
               ))

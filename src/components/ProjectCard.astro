@@ -8,13 +8,14 @@ const { project } = Astro.props;
 ---
 
 <article class="card">
-  <h5>{project.title}</h5>
+  <h4>{project.title}</h4>
   <p>{project.description}</p>
 </article>
 
 <style>
-  h5 {
+  h4 {
     margin-bottom: 0.5rem;
+    font-size: var(--text-xl);
   }
 
   .card {
