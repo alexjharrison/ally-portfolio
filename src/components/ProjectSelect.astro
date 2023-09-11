@@ -1,0 +1,66 @@
+---
+import { projects } from "../content/_projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div>
+  <section>
+    <h3>Case Studies</h3>
+    <div class="container">
+      {
+        projects.slice(0, 3).map(proj => (
+          <a href={"/work/" + proj.slug}>
+            <ProjectCard project={proj} />
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <div class="container">
+    <section>
+      <h3>Personas</h3>
+      <div class="container">
+        <a href={"/work/" + projects[3].slug}>
+          <ProjectCard project={projects[3]} />
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h3>User Journeys</h3>
+      <div class="container">
+        <a href={"/work/" + projects[4].slug}>
+          <ProjectCard project={projects[4]} />
+        </a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  section {
+    margin-block: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--gray-200);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 50em) {
+    .container {
+      flex-direction: row;
+    }
+  }
+</style>

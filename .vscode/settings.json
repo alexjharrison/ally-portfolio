@@ -1,5 +1,5 @@
 {
     "editor.formatOnSave": true,
     "prettier.arrowParens": "avoid",
-    "prettier.trailingComma": "all"
+    "prettier.trailingComma": "all",
 }

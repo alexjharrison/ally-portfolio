@@ -1,0 +1,51 @@
+---
+import type { Project } from "../content/_projects";
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="card">
+  <h5>{project.title}</h5>
+  <p>{project.description}</p>
+</article>
+
+<style>
+  h5 {
+    margin-bottom: 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    max-width: auto;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    font-family: var(--font-brand);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    transition: box-shadow var(--theme-transition);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  p {
+    opacity: 0;
+    transition: ease opacity 0.4s;
+  }
+  .card:hover > p {
+    opacity: 1;
+  }
+
+  @media (min-width: 50em) {
+    .card {
+      max-width: 345px;
+    }
+  }
+</style>

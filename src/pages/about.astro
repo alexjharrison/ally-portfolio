@@ -8,12 +8,12 @@ import CallToAction from "../components/CallToAction.astro";
 
 <BaseLayout
   title="About | Allison Harrison"
-  description="About Allison Harrison Lorem Ipsum"
+  description="About Allison Harrison"
 >
   <div class="stack gap-20">
     <main class="wrapper about">
       <Hero
-        title="About"
+        title="About Me"
         tagline="Thanks for stopping by. Read below to learn more about myself and my background."
       >
         <img
@@ -36,10 +36,10 @@ import CallToAction from "../components/CallToAction.astro";
             pulvinar etiam non.
           </p>
           <p>
-            When I'm off the clock you can find me skating for the <a
+            When I'm off the clock you can find me skating for <a
               href="https://dirtyjerseyrollerderby.com/"
               target="_blank">Dirty Jersey Roller Derby</a
-            > team. If you're in town come watch a bout!
+            >. If you're in town come watch a bout!
           </p>
         </div>
       </section>
@@ -58,14 +58,24 @@ import CallToAction from "../components/CallToAction.astro";
       </section>
       <section>
         <h2 class="section-title">Skills</h2>
-        <div class="content">
+        <div class="content content-list gap-20">
           <ul>
-            <li>Usability Testing</li>
-            <li>Contextual Inquiry</li>
+            <li>Contextual Inquiries</li>
+            <li>Concept Sprints</li>
             <li>Wireframes</li>
             <li>User Persona Creation</li>
             <li>Journey Mapping</li>
             <li>Survey Design</li>
+            <li>Heuristic Evaluations</li>
+          </ul>
+          <ul>
+            <li>Think-Alouds</li>
+            <li>Card Sorting</li>
+            <li>Qualtrics</li>
+            <li>UserZoom</li>
+            <li>Invision</li>
+            <li>Figma</li>
+            <li>Camtasia</li>
           </ul>
         </div>
       </section>
@@ -105,6 +115,10 @@ import CallToAction from "../components/CallToAction.astro";
 
   .content {
     grid-column: 2 / 4;
+  }
+
+  .content-list {
+    display: flex;
   }
 
   .content :global(a) {
