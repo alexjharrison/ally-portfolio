@@ -6,5 +6,35 @@ const project = projects[4];
 ---
 
 <ProjectPageLayout project={project}>
-  <div>test</div>
+  <h2>Product</h2>
+  <p>Something</p>
+  <h2>Research Goals</h2>
+  <p>Something Else</p>
+  <h2>Methods</h2>
+  <p>I Dunno</p>
+
+  <h3>Current State Journey: Large Client</h3>
+  <div class="container">
+    <img src="/assets/tax-journey-1-sm.png" alt="tax journey one" />
+  </div>
+  <small>image scrolls right -&gt;</small>
+
+  <h3>Current State Journey: Small Client</h3>
+  <div class="container">
+    <img src="/assets/tax-journey-2-sm.png" alt="tax journey two" />
+  </div>
+  <small>image scrolls right -&gt;</small>
 </ProjectPageLayout>
+
+<style>
+  .container {
+    width: 80vw;
+    height: 87vh;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  img {
+    height: 85vh;
+    max-width: none;
+  }
+</style>

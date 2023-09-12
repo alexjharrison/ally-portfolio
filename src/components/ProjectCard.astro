@@ -21,6 +21,7 @@ const { project } = Astro.props;
   .card {
     padding: 1rem;
     max-width: auto;
+    min-height: auto;
     background: var(--gradient-subtle);
     border: 1px solid var(--gray-800);
     border-radius: 0.75rem;
@@ -47,6 +48,7 @@ const { project } = Astro.props;
   @media (min-width: 50em) {
     .card {
       max-width: 345px;
+      min-height: 280px;
     }
   }
 </style>

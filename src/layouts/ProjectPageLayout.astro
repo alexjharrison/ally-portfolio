@@ -15,13 +15,13 @@ const { project } = Astro.props;
 <main>
   <BaseLayout title={project.title} description={project.description}>
     <div class="stack gap-20">
-      <div class="stack gap-15">
+      <div class="stack gap-10">
         <header>
           <div class="wrapper stack gap-2">
             <a class="back-link" href="/work/"
               ><Icon icon="arrow-left" /> Work</a
             >
-            <Hero title={project.title} align="start">
+            <Hero title={`${project.type} - ${project.title}`} align="start">
               <div class="details">
                 <div class="tags">
                   {project.tags.map(t => <Pill>{t}</Pill>)}
@@ -47,8 +47,6 @@ const { project } = Astro.props;
       <ContactCTA />
     </div>
   </BaseLayout>
-
-  <slot />
 </main>
 
 <style>
@@ -81,7 +79,6 @@ const { project } = Astro.props;
   }
 
   .content {
-    max-width: 65ch;
     margin-inline: auto;
   }
 
