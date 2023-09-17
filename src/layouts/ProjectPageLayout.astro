@@ -13,7 +13,10 @@ const { project } = Astro.props;
 ---
 
 <main>
-  <BaseLayout title={project.title} description={project.description}>
+  <BaseLayout
+    title={project.title + " | Allison Harrison"}
+    description={project.description}
+  >
     <div class="stack gap-20">
       <div class="stack gap-10">
         <header>
