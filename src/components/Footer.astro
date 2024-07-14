@@ -3,8 +3,13 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="group">
-    <p>&copy; {currentYear} Allison Harrison</p>
+  <div>
+    <p>&copy; <span id="current-year">{currentYear}</span> Allison Harrison</p>
+    <p>
+      Site created by <a href="https://aharrison.xyz" target="_blank"
+        >Alex Harrison</a
+      >
+    </p>
   </div>
   <p class="socials">
     <a
@@ -17,6 +22,12 @@ const currentYear = new Date().getFullYear();
     <a href="/assets/resume.pdf" target="_blank"> Resume</a>
   </p>
 </footer>
+
+<script is:inline>
+  const currentYear = new Date().getFullYear();
+  document.getElementById("current-year").innerText = currentYear;
+</script>
+
 <style>
   footer {
     display: flex;

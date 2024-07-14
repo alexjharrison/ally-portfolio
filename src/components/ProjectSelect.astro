@@ -1,77 +1,56 @@
 ---
 import { projects } from "../content/_projects";
-import ProjectCard from "./ProjectCard.astro";
+import Pill from "./Pill.astro";
 ---
 
 <div>
   {
     projects.map(project => (
-      <section class="container">
-        <h3>{project.title}</h3>
-        <a href={`/work/${project.slug}`}>
-          <ProjectCard project={project} />
+      <section class="flex justify-around my-6">
+        <a class="card md:flex w-full" href={`/work/${project.slug}`}>
+          <div class="md:w-1/2 p-10 flex flex-col justify-between">
+            <h3 class="mb-3">{project.title}</h3>
+            <p>{project.teaser}</p>
+          </div>
+          <div class="px-7 flex justify-around md:w-1/2 items-center">
+            <div>
+              {project.sections.map(section => (
+                <div class="my-1">
+                  <Pill>{section}</Pill>
+                </div>
+              ))}
+            </div>
+            <div class="ml-2">
+              <img
+                src="/assets/logos/adp.png"
+                class="h-24 w-auto object-contain"
+                alt="adp logo"
+              />
+            </div>
+          </div>
         </a>
       </section>
     ))
   }
-  <!-- <section>
-    <h3>Case Studies</h3>
-    <div class="container">
-      {
-        projects.slice(0, 3).map(proj => (
-          <a href={"/work/" + proj.slug}>
-            <ProjectCard project={proj} />
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
-  <div class="container">
-    <section>
-      <h3>Personas</h3>
-      <div class="container">
-        <a href={"/work/" + projects[3].slug}>
-          <ProjectCard project={projects[3]} />
-        </a>
-      </div>
-    </section>
-
-    <section>
-      <h3>User Journeys</h3>
-      <div class="container">
-        <a href={"/work/" + projects[4].slug}>
-          <ProjectCard project={projects[4]} />
-        </a>
-      </div>
-    </section>
-  </div> -->
 </div>
 
 <style>
-  section {
-    margin-block: 2rem;
-  }
-
-  a {
+  .card {
+    padding: 1rem;
+    max-width: auto;
+    min-height: auto;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     text-decoration: none;
-    color: var(--gray-200);
-    width: 100%;
+    font-family: var(--font-brand);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    transition: box-shadow var(--theme-transition);
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  h3 {
-    margin-bottom: 1rem;
-  }
-
-  @media (min-width: 50em) {
-    .container {
-      flex-direction: row;
-    }
+  .card:hover {
+    box-shadow: var(--shadow-md);
   }
 </style>
