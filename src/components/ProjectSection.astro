@@ -1,0 +1,53 @@
+---
+import type { Section } from "../content/_projects";
+
+interface Props {
+  section: Section;
+}
+
+const { section } = Astro.props;
+---
+
+<section>
+  <h2 class="my-4">{section.title}</h2>
+  <div
+    class="max-w-4xl border-purple-300 border-2 p-4 rounded-md shadow-xl shadow-purple-200"
+  >
+    {
+      section.text.map(p =>
+        Array.isArray(p) ? (
+          <ul class="my-2">
+            {p.map(li => (
+              <li>{li}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="m-3">{p}</p>
+        ),
+      )
+    }
+  </div>
+  <div class="my-10">
+    {
+      section.images &&
+        section.images.map(({ alt, src, title }) => (
+          <>
+            {title && <p class="text-sm font-semibold">{title}</p>}
+            <div class="my-2 text-center flex justify-start">
+              <a href={src} target="_blank">
+                <img class="max-h-96 rounded-lg" src={src} alt={alt} />
+              </a>
+            </div>
+          </>
+        ))
+    }
+  </div>
+  <div class="w-full border-2 border-b-purple-400 my-16"></div>
+</section>
+
+<style>
+  ul {
+    list-style: disc;
+    margin-left: 3rem;
+  }
+</style>

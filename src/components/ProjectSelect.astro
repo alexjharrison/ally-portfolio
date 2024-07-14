@@ -4,7 +4,17 @@ import ProjectCard from "./ProjectCard.astro";
 ---
 
 <div>
-  <section>
+  {
+    projects.map(project => (
+      <section class="container">
+        <h3>{project.title}</h3>
+        <a href={`/work/${project.slug}`}>
+          <ProjectCard project={project} />
+        </a>
+      </section>
+    ))
+  }
+  <!-- <section>
     <h3>Case Studies</h3>
     <div class="container">
       {
@@ -35,7 +45,7 @@ import ProjectCard from "./ProjectCard.astro";
         </a>
       </div>
     </section>
-  </div>
+  </div> -->
 </div>
 
 <style>
