@@ -150,31 +150,31 @@ export const projects: Project[] = [
   {
     title: "Open Companies Dashboard",
     slug: "open-companies-dashboard",
-    sections: ["Discovery Interviews", "Usability Testing", "User Journey"],
-    teaser: "What happens when an ADP client is contacted by a tax agency?",
+    sections: ["Discovery Interviews", "Usability Testing"],
+    teaser: "How can ADP associates track clients’ progress at a glance?",
     sectionDetails: [
       {
         title: "Overview",
         text: [
-          "I was the user researcher on a concept sprint done to kickstart a project to upgrade how ADP handles the notices sent to their clients by tax agencies. The project involved extensive discovery research to document the current state, facilitation of an ideation workshop with multiple stakeholders to make use of those findings, and an initial round of usability testing.",
+          "The Open Companies list is one of many internal tools that give ADP associates visibility into a client’s status. I led research leading to a new dashboard intended to make it easier to spot clients missing key updates.",
         ],
       },
       {
         title: "Problem",
         text: [
-          "When an ADP client gets a notice from a tax agency, it goes through a process involving multiple layers of ADP teams and technology.  Resolving a notice may take months, and mistakes can be costly.  Our goal was to improve the process to have shorter resolution times, higher accuracy, and more visibility to clients.",
+          "Some of our users’ responsibilities include monitoring multiple clients in a book of business to identify any that are missing necessary documentation (open companies). Our goal was to create a tool to identify and resolve these issues.",
         ],
       },
       {
         title: "Solution",
         text: [
-          "We held a concept sprint workshop with a group of designers, developers, business stakeholders, and potential users.  Over 3 days we reviewed the current state, brainstormed ideas for improvements, and generated a plan for next steps.",
+          "I led discovery research to identify pain points with the current system.  Later, I conducted usability tests to validate the design of an Open Companies dashboard.",
         ],
       },
       {
         title: "Discovery Interviews",
         text: [
-          "Before we could start designing a new experience, we needed to hear from everyone involved in the existing process.  I conducted one-on-one interviews with ADP clients, the frontline associates working with those clients, and the behind the scenes associates processing the notices.  I learned how everyone was impacted by a notice, the steps they had to take, and what pain points they met along the way.",
+          "I interviewed multiple ADP associates whose responsibilities involved monitoring the list of open companies to discover the full context of when and how they needed that information, and what difficulties they encountered in finding it.",
         ],
         images: [
           {
@@ -185,29 +185,9 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: "Personas",
-        text: [
-          "I created personas to document the goals, sentiments, and pain points of the people involved in the process. Tax notices cross all of ADP’s normal business segments, and many of our workshop participants were only familiar with their own piece of the puzzle.  Reviewing the personas allowed us to consider all of our users during the ideation.",
-          "I created personas to document the goals, sentiments, and pain points of the people involved in the process. Tax notices cross all of ADP’s normal business segments, and many of our workshop participants were only familiar with their own piece of the puzzle.  Reviewing the personas allowed us to consider all of our users during the ideation.",
-        ],
-      },
-      {
-        title: "User Journey",
-        text: [
-          "I created journey maps to document the entire process from a client receiving a notice through its final resolution, making note of the different technology, people, and pain points involved at each step along the way. ",
-          ["bullet 1", "bullet2"],
-        ],
-      },
-      {
-        title: "Design Workshop",
-        text: [
-          "A group of designers, developers, business stakeholders, and potential users met for a 3 day workshop that I helped facilitate.  We reviewed what we’d learned about the current state, and went through brainstorming and prioritization exercises to generate a plan for next steps.",
-        ],
-      },
-      {
         title: "Usability Testing",
         text: [
-          "As part of the workshop, I was able to run a quick round of usability testing.  We were able to get user input on some of the ideas from early brainstorming sessions and incorporate it into later ideation exercises.",
+          "My team used the findings from the discovery research to design a dashboard that would make it easy to find open companies and work to resolve the issues.  I conducted a series of usability tests to validate the design and make recommendations for improvement.",
         ],
       },
     ],
