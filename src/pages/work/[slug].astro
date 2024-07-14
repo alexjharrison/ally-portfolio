@@ -33,7 +33,16 @@ if (!project) throw new Error("GAH");
               <p class="description">{project.teaser}</p>
               <div class="details">
                 <div class="tags">
-                  {project.sections.map(t => <Pill>{t}</Pill>)}
+                  {
+                    project.sections.map(t => (
+                      <div
+                        class="clickable-pill cursor-pointer"
+                        data-section={t}
+                      >
+                        <Pill>{t}</Pill>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </Hero>
@@ -51,6 +60,17 @@ if (!project) throw new Error("GAH");
     </div>
   </BaseLayout>
 </main>
+
+<script is:inline>
+  const pills = document.querySelectorAll(".clickable-pill");
+  pills.forEach(element => {
+    const section = element.dataset.section;
+    element.addEventListener("click", () => {
+      const el = document.getElementById(section);
+      el.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
 
 <style>
   header {
