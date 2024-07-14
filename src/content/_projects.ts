@@ -70,6 +70,13 @@ export const projects: Project[] = [
         text: [
           "I combined the subjective and objective results from the discovery research to create personas that reflected the professional attributes of our users, as well as their motivations and challenges.",
         ],
+        images: [
+          {
+            src: "/assets/devx-personas.png",
+            alt: "devx personas",
+            title: "Service Owner Persona",
+          },
+        ],
       },
       {
         title: "Next Steps",
@@ -106,7 +113,9 @@ export const projects: Project[] = [
       {
         title: "Problem",
         text: [
-          "When an ADP client gets a notice from a tax agency, it goes through a process involving multiple layers of ADP teams and technology.  Resolving a notice may take months, and mistakes can be costly.  Our goal was to improve the process to have shorter resolution times, higher accuracy, and more visibility to clients.",
+          [
+            "When an ADP client gets a notice from a tax agency, it goes through a process involving multiple layers of ADP teams and technology. Resolving a notice may take months, and mistakes can be costly.  Our goal was to improve the process to have shorter resolution times, higher accuracy, and more visibility to clients.",
+          ],
         ],
       },
       {
@@ -131,6 +140,18 @@ export const projects: Project[] = [
         title: "User Journey",
         text: [
           "I created journey maps to document the entire process from a client receiving a notice through its final resolution, making note of the different technology, people, and pain points involved at each step along the way.  ",
+        ],
+        images: [
+          {
+            src: "/assets/tax-journey-1-sm.png",
+            alt: "tax notices user journey",
+            title: "Tax Notices User Journey - Large Client",
+          },
+          {
+            src: "/assets/tax-journey-2-sm.png",
+            alt: "tax notices user journey 2",
+            title: "Tax Notices User Journey - Small Client",
+          },
         ],
       },
       {
