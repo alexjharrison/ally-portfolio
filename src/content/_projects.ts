@@ -31,14 +31,15 @@ export const projects: Project[] = [
   {
     title: "DevX",
     slug: "devx",
-    sections: ["Discovery Interviews", "Surveys", "Personas"],
+    sections: ["Surveys", "Discovery Interviews", "Personas"],
     teaser:
       "Who and what is behind the various services used by developers at ADP? (And what is a “service” anyway?)",
     sectionDetails: [
       {
         title: "Overview",
         text: [
-          "DevX is an internal tool to help ADP developers use services for their products. As the user researcher, my first goal was to help the non-technical members of my team understand our users and their goals. ",
+          "DevX is an internal tool to help ADP developers use services for their products.",
+          "As the user researcher, my first goal was to help the non-technical members of my team understand our users and their goals. ",
         ],
       },
       {
@@ -98,8 +99,8 @@ export const projects: Project[] = [
     teaser: "What happens when an ADP client is contacted by a tax agency?",
     sections: [
       "Discovery Interviews",
-      "User Journey",
       "Personas",
+      "User Journey",
       "Design Workshop",
       "Usability Testing",
     ],
@@ -107,15 +108,15 @@ export const projects: Project[] = [
       {
         title: "Overview",
         text: [
-          "I was the user researcher on a concept sprint done to kickstart a project to upgrade how ADP handles the notices sent to their clients by tax agencies. The project involved extensive discovery research to document the current state, facilitation of an ideation workshop with multiple stakeholders to make use of those findings, and an initial round of usability testing.",
+          "I was the user researcher on a concept sprint done to kickstart a project to upgrade how ADP handles the notices sent to their clients by tax agencies.",
+          "The project involved extensive discovery research to document the current state, facilitation of an ideation workshop with multiple stakeholders to make use of those findings, and an initial round of usability testing.",
         ],
       },
       {
         title: "Problem",
         text: [
-          [
-            "When an ADP client gets a notice from a tax agency, it goes through a process involving multiple layers of ADP teams and technology. Resolving a notice may take months, and mistakes can be costly.  Our goal was to improve the process to have shorter resolution times, higher accuracy, and more visibility to clients.",
-          ],
+          "When an ADP client gets a notice from a tax agency, it goes through a process involving multiple layers of ADP teams and technology. Resolving a notice may take months, and mistakes can be costly.",
+          "Our goal was to improve the process to have shorter resolution times, higher accuracy, and more visibility for our clients.",
         ],
       },
       {
@@ -127,13 +128,26 @@ export const projects: Project[] = [
       {
         title: "Discovery Interviews",
         text: [
-          "Before we could start designing a new experience, we needed to hear from everyone involved in the existing process.  I conducted one-on-one interviews with ADP clients, the frontline associates working with those clients, and the behind the scenes associates processing the notices.  I learned how everyone was impacted by a notice, the steps they had to take, and what pain points they met along the way.",
+          "Before we could start designing a new experience, we needed to hear from everyone involved in the existing process.  I conducted one-on-one interviews with ",
+          [
+            "ADP clients,",
+            "Frontline associates working with those clients, and",
+            "Behind-the-scenes associates processing the notices",
+          ],
+          "I learned how everyone was impacted by a notice, the steps they had to take, and what pain points they met along the way.",
         ],
       },
       {
         title: "Personas",
         text: [
           "I created personas to document the goals, sentiments, and pain points of the people involved in the process. Tax notices cross all of ADP’s normal business segments, and many of our workshop participants were only familiar with their own piece of the puzzle.  Reviewing the personas allowed us to consider all of our users during the ideation.",
+        ],
+        images: [
+          {
+            src: "/assets/pictures/TaxNotices_AllPersonas.png",
+            alt: "Images of five different personas describing the people involved with Tax Notices",
+            title: "Tax Notices Personas",
+          },
         ],
       },
       {
@@ -158,6 +172,13 @@ export const projects: Project[] = [
         title: "Design Workshop",
         text: [
           "A group of designers, developers, business stakeholders, and potential users met for a 3 day workshop that I helped facilitate.  We reviewed what we’d learned about the current state, and went through brainstorming and prioritization exercises to generate a plan for next steps.",
+        ],
+        images: [
+          {
+            src: "/assets/pictures/TaxNotices_ConceptSprint.png",
+            alt: "Photographs from the design workshop",
+            title: "Concept Sprint Ideation Boards",
+          },
         ],
       },
       {
@@ -197,18 +218,19 @@ export const projects: Project[] = [
         text: [
           "I interviewed multiple ADP associates whose responsibilities involved monitoring the list of open companies to discover the full context of when and how they needed that information, and what difficulties they encountered in finding it.",
         ],
-        images: [
-          {
-            src: "/assets/pictures/TaxNotices_ConceptSprint.png",
-            alt: "board",
-            title: "Brainstorming",
-          },
-        ],
       },
       {
         title: "Usability Testing",
         text: [
           "My team used the findings from the discovery research to design a dashboard that would make it easy to find open companies and work to resolve the issues.  I conducted a series of usability tests to validate the design and make recommendations for improvement.",
+        ],
+
+        images: [
+          {
+            src: "/assets/pictures/Open_companies_usability_testing.JPG",
+            alt: "Images of slides from the usability testing readout",
+            title: "Samples from Usability Testing Readout",
+          },
         ],
       },
     ],

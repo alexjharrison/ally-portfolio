@@ -5,7 +5,4 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  server: {
-    host: "192.168.0.166",
-  },
 });
