@@ -196,6 +196,21 @@ h5 {
 	flex-direction: column;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
+.sbs-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+	align-items: center;
+}
+
+.sbs-item {
+	flex: 0, 0, 100%
+}
+
 .gap-2 {
 	gap: 0.5rem;
 }
